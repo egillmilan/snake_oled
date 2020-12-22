@@ -17,8 +17,6 @@
 #define OLED_RESET 13
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
-bool takki;
-
 
 void setup() {
   pinMode(UP_button, INPUT_PULLUP);     //Activate internal pull-up resistors of atmega328p chip
