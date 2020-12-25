@@ -71,8 +71,8 @@ void initialize(){                            //put snake in initial position
 void newApple(){                              //generate random pos for new apple
   ax = random(sx, xsz);                       //new pos excluding top left corner due to score display
   ay = random(sy, ysz);
-  for (int i = 0; i < plen; i++){
-    while( ax == posx[i] && ay == posy[i]){   //check if apple pos occupied by snake
+  for (int i = 0; i < plen; i++){             //check if apple pos occupied by snake
+    while((ax == posx[i] && ay == posy[i]) || (ax == px && ay == py)){
       newApple();                             //generate new apple recursively until not on snake
       break;
     }
